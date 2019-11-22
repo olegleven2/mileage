@@ -1,0 +1,17 @@
+
+<div class="container main-wp">
+  <div class="row mb-3">
+    <div class="col-md-8">
+      <input class="form-control" type="text" [(ngModel)]="mileageValue" appThousandsFormatter>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-outline-dark" (click)="onUpdate()">Update</button>
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let product of mileageResult">{{product.label}}</li>
+  </ul>
+
+  <a href="javascript:" (click)="showMore()" *ngIf="mileageMinValues.length || mileageMaxValues.length">Show more</a>
+</div>
